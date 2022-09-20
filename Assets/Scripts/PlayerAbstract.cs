@@ -4,8 +4,11 @@ using UnityEngine;
 
 public abstract class PlayerAbstract : MonoBehaviour
 {
+    [SerializeField]
+    float Forse = 5f;
+    [HideInInspector]
+    public float forse;
     
-    public float Forse = 5f;
 
     protected Rigidbody RB;
 
@@ -14,13 +17,13 @@ public abstract class PlayerAbstract : MonoBehaviour
     {
         RB = GetComponent<Rigidbody>();
         Respawn = transform.position;
+        forse = Forse;
     }
 
     public  void Die()
     {
-        IDestroy.Refresh();
-        IScore.Refresh();
         transform.position = Respawn;
         RB.velocity = new Vector3(0, 0, 0);
+        forse = Forse;
     }
 }

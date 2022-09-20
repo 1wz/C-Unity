@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Invers : MonoBehaviour, IControl, IDestroy
+public class Invers : MonoBehaviour,  IDestroy
 {
     private void OnTriggerEnter(Collider other)
     {
@@ -15,15 +15,15 @@ public class Invers : MonoBehaviour, IControl, IDestroy
 
     public void SetForce(Collider other)
     {
-        other.GetComponent<PlayerAbstract>().Forse *=(-1f);
+        other.GetComponent<PlayerAbstract>().forse *=(-1f);
     }
 
     public void Destroy()
     {
-        IDestroy.IfDie.Add(this);
         gameObject.SetActive(false);
     }
-    public void RefreshIt()
+
+    public void Reload()
     {
         gameObject.SetActive(true);
     }

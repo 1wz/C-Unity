@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,28 +8,34 @@ public class Score : MonoBehaviour,IScore,IDestroy
 {
     [SerializeField]
     int Profit;
-    [SerializeField]
-    Text ScoreUI;
 
-    private void Start()
-    {
-        IScore.ScoreText = ScoreUI;
-    }
+    Text ScoreText;
+
+
 
     private void OnTriggerEnter(Collider other)
     {
-        IScore.AddScore(Profit);
+        AddScore(Profit);
         Destroy();
     }
 
     public void Destroy()
     {
-        
-        IDestroy.IfDie.Add(this);
         gameObject.SetActive(false);
     }
 
-    public void RefreshIt()
+
+    public void AddScore(int profit)
+    {
+        ScoreText.text = (Int32.Parse(ScoreText.text) + profit).ToString();
+    }
+
+    public void DetectText(Text text)
+    {
+        ScoreText = text;
+    }
+
+    public void Reload()
     {
         gameObject.SetActive(true);
     }

@@ -57,15 +57,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\PlayerAbstract.cs" />
+    <Compile Include="Assets\Scripts\Bonuses\Die.cs" />
     <Compile Include="Assets\Scripts\PlayerAlternative.cs" />
-    <Compile Include="Assets\Scripts\PlayerGrand.cs" />
-    <Compile Include="Assets\Scripts\Bonuses\Interfaces.cs" />
-    <Compile Include="Assets\Simple Helvetica\SimpleHelvetica.cs" />
     <Compile Include="Assets\Scripts\Bonuses\Score.cs" />
     <Compile Include="Assets\Scripts\Bonuses\Impulse.cs" />
-    <Compile Include="Assets\Scripts\Bonuses\Speed.cs" />
     <Compile Include="Assets\Scripts\Bonuses\Invers.cs" />
-    <Compile Include="Assets\Scripts\Bonuses\Die.cs" />
+    <Compile Include="Assets\Scripts\Bonuses\Speed.cs" />
+    <Compile Include="Assets\Scripts\Bonuses\Manager.cs" />
+    <Compile Include="Assets\Scripts\Bonuses\Interfaces.cs" />
+    <Compile Include="Assets\Scripts\PlayerGrand.cs" />
+    <Compile Include="Assets\Simple Helvetica\SimpleHelvetica.cs" />
+    <Compile Include="Assets\Scripts\CameraShake.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Simple Helvetica\readme.txt" />

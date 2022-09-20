@@ -9,6 +9,6 @@ public class PlayerAlternative : PlayerAbstract
 
         //Vector2 targetVelocity = new Vector2(Input.GetAxis("Horizontal") * targetMovingSpeed, Input.GetAxis("Vertical") * targetMovingSpeed);
 
-        RB.AddForce(new Vector3(Input.GetAxisRaw("Mouse X"), 0, Input.GetAxisRaw("Mouse Y")) * Forse);
+        RB.AddForce(new Vector3(Input.GetAxisRaw("Mouse X"), 0, Input.GetAxisRaw("Mouse Y")) * forse);
     }
 }

@@ -10,6 +10,9 @@ public class PlayerGrand : PlayerAbstract
 
         //Vector2 targetVelocity = new Vector2(Input.GetAxis("Horizontal") * targetMovingSpeed, Input.GetAxis("Vertical") * targetMovingSpeed);
 
-        RB.AddForce(new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical")).normalized*Forse);
+        RB.AddForce(new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical")).normalized*forse);
     }
+
+    public void EmptyFunk()
+    { }
 }

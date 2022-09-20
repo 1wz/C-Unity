@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Speed : MonoBehaviour,IControl,IDestroy
+public class Speed : MonoBehaviour,IDestroy
 {
     [SerializeField]
     float ForceUp = 5;
@@ -17,16 +17,15 @@ public class Speed : MonoBehaviour,IControl,IDestroy
 
     public void SetForce(Collider other)
     {
-        other.GetComponent<PlayerAbstract>().Forse+=Mathf.Sign(other.GetComponent<PlayerAbstract>().Forse)*ForceUp;
+        other.GetComponent<PlayerAbstract>().forse+=Mathf.Sign(other.GetComponent<PlayerAbstract>().forse)*ForceUp;
     }
 
     public void Destroy()
     {
-        IDestroy.IfDie.Add(this);
         gameObject.SetActive(false);
     }
 
-    public void RefreshIt()
+    public void Reload()
     {
         gameObject.SetActive(true);
     }

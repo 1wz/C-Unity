@@ -4,11 +4,15 @@ using UnityEngine;
 
 public class Die : MonoBehaviour
 {
+    public delegate void OnDie();
+    public event OnDie ondie;
+
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.TryGetComponent<PlayerAbstract>(out _))
         {
-            other.GetComponent<PlayerAbstract>().Die();
+            ondie?.Invoke();
         }
     }
 }
