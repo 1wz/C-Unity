@@ -56,18 +56,21 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\PlayerAbstract.cs" />
-    <Compile Include="Assets\Scripts\Bonuses\Die.cs" />
-    <Compile Include="Assets\Scripts\PlayerAlternative.cs" />
-    <Compile Include="Assets\Scripts\Bonuses\Score.cs" />
-    <Compile Include="Assets\Scripts\Bonuses\Impulse.cs" />
-    <Compile Include="Assets\Scripts\Bonuses\Invers.cs" />
-    <Compile Include="Assets\Scripts\Bonuses\Speed.cs" />
-    <Compile Include="Assets\Scripts\Bonuses\Manager.cs" />
-    <Compile Include="Assets\Scripts\Bonuses\Interfaces.cs" />
-    <Compile Include="Assets\Scripts\PlayerGrand.cs" />
+    <Compile Include="Assets\Scripts\models\Player\PlayerAbstract.cs" />
+    <Compile Include="Assets\Scripts\models\Bonuses\Die.cs" />
+    <Compile Include="Assets\Scripts\View\CameraShake.cs" />
+    <Compile Include="Assets\Scripts\models\Player\PlayerAlternative.cs" />
+    <Compile Include="Assets\Scripts\models\Bonuses\Score.cs" />
+    <Compile Include="Assets\Scripts\models\Bonuses\Impulse.cs" />
+    <Compile Include="Assets\Scripts\models\Bonuses\Invers.cs" />
+    <Compile Include="Assets\Scripts\models\Bonuses\Speed.cs" />
+    <Compile Include="Assets\Scripts\models\Bonuses\Interfaces.cs" />
+    <Compile Include="Assets\Scripts\models\Player\PlayerGrand.cs" />
     <Compile Include="Assets\Simple Helvetica\SimpleHelvetica.cs" />
-    <Compile Include="Assets\Scripts\CameraShake.cs" />
+    <Compile Include="Assets\Scripts\View\ScoreView.cs" />
+    <Compile Include="Assets\Scripts\models\Bonuses\Win.cs" />
+    <Compile Include="Assets\Scripts\Controller.cs" />
+    <Compile Include="Assets\Scripts\View\ParticleView.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Simple Helvetica\readme.txt" />
