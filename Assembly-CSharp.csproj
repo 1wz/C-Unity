@@ -58,7 +58,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\models\Player\PlayerAbstract.cs" />
     <Compile Include="Assets\Scripts\models\Bonuses\Die.cs" />
-    <Compile Include="Assets\Scripts\View\CameraShake.cs" />
+    <Compile Include="Assets\Scripts\View\CameraManager.cs" />
     <Compile Include="Assets\Scripts\models\Player\PlayerAlternative.cs" />
     <Compile Include="Assets\Scripts\models\Bonuses\Score.cs" />
     <Compile Include="Assets\Scripts\models\Bonuses\Impulse.cs" />
@@ -66,12 +66,13 @@
     <Compile Include="Assets\Scripts\models\Bonuses\Invers.cs" />
     <Compile Include="Assets\Scripts\models\Bonuses\Speed.cs" />
     <Compile Include="Assets\Scripts\models\Bonuses\Win.cs" />
+    <Compile Include="Assets\Scripts\Lesson7.cs" />
     <Compile Include="Assets\Scripts\models\Bonuses\Interfaces.cs" />
     <Compile Include="Assets\Scripts\models\Player\PlayerGrand.cs" />
     <Compile Include="Assets\Scripts\View\ParticleView.cs" />
     <Compile Include="Assets\Scripts\Controller.cs" />
     <Compile Include="Assets\Simple Helvetica\SimpleHelvetica.cs" />
-    <Compile Include="Assets\Scripts\Lesson7.cs" />
+    <Compile Include="Assets\Scripts\SerializebleClass.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Simple Helvetica\readme.txt" />

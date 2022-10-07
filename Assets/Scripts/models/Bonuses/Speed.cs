@@ -41,6 +41,5 @@ public class Speed : MonoBehaviour,IDestroy
     public void Dispose()
     {
         Controller.OnReload -= Reload;
-        Debug.Log("Успех");
     }
 }

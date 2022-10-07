@@ -9,7 +9,9 @@ public abstract class PlayerAbstract : MonoBehaviour, IDisposable
     float Forse = 5f;
     [HideInInspector]
     public float forse;
-    
+    public int score = 0;
+
+
     protected Rigidbody RB;
     Vector3 Respawn;
 
@@ -35,11 +37,17 @@ public abstract class PlayerAbstract : MonoBehaviour, IDisposable
         OnDie?.Invoke(this);
     }
 
+    public void AddScore(int t)
+    {
+        score+=t;
+    }
+
     public void Reload()
     {
         transform.position = Respawn;
         RB.velocity = new Vector3(0, 0, 0);
         forse = Forse;
+        score = 0;
         gameObject.SetActive(true);
     }
 

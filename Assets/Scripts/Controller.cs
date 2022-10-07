@@ -6,16 +6,28 @@ using UnityEngine.UI;
 
 public class Controller : MonoBehaviour
 {
-
-    Button button;
-    
+ 
     public static event Action OnReload;
+    SerializebleClass SaveClass = new SerializebleClass();
     void Awake()
     {
-        var gameObject = Resources.Load<Button>("Button (Legacy)");
-        button = UnityEngine.Object.Instantiate(gameObject, UnityEngine.Object.FindObjectOfType<Canvas>().transform);
+        Button gameObject;
+        Button button;
+        Transform canvas = UnityEngine.Object.FindObjectOfType<Canvas>().transform;
+        gameObject = Resources.Load<Button>("Restart");
+        button = UnityEngine.Object.Instantiate(gameObject,canvas);
         button.onClick.AddListener(Reload);
 
+        gameObject = Resources.Load<Button>("Load");
+        button = UnityEngine.Object.Instantiate(gameObject, canvas);
+        button.onClick.AddListener(Reload);
+
+        gameObject = Resources.Load<Button>("Save");
+        button = UnityEngine.Object.Instantiate(gameObject, canvas);
+        button.onClick.AddListener(Reload);
+
+
+        GameObject[] savelist = UnityEngine.Object.FindObjectsOfType<IDisposable>();
     }
 
     public static void Reload()
@@ -23,5 +35,13 @@ public class Controller : MonoBehaviour
         OnReload?.Invoke();
     }
 
-    
+    public void Save()
+    {
+        
+    }
+
+    public void Load()
+    {
+
+    }
 }

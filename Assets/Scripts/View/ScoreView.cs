@@ -24,12 +24,12 @@ public class ScoreView : MonoBehaviour,IDisposable
 
     private void ShowWin(PlayerAbstract PA)
     {
-        score.text += PA.gameObject.name + " прошел уровень\n";
+        score.text += PA.gameObject.name + " прошел уровень со счетом "+PA.score+"\n";
     }
 
     private void ShowDie(PlayerAbstract PA)
     {
-        score.text += PA.gameObject.name + " умер\n";
+        score.text += PA.gameObject.name + " умер со счетом "+PA.score+"\n";
     }
     public void Reload()
     {

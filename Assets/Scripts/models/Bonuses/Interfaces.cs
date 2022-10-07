@@ -11,3 +11,8 @@ public interface IDestroy:IDisposable
     void Reload();
 }
 
+public interface ISaveble
+{
+
+}
+

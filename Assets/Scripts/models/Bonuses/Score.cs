@@ -15,6 +15,7 @@ public class Score : MonoBehaviour,IDestroy
     {
         if (other.TryGetComponent<PlayerAbstract>(out var PV))
         {
+            PV.AddScore(Profit);
             OnTakeBonus?.Invoke(Profit,PV);
             Destroy();
         }
