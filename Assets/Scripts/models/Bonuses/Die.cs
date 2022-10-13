@@ -7,7 +7,6 @@ public class Die : MonoBehaviour
 {
 
 
-
     private void OnTriggerEnter(Collider other)
     {
         if (other.TryGetComponent<PlayerAbstract>(out var PA))

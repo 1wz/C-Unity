@@ -2086,6 +2086,7 @@ GameObject:
   - component: {fileID: 6348152553452227535}
   - component: {fileID: 2095037542807174788}
   - component: {fileID: 2095037542807174791}
+  - component: {fileID: -6983627937871886374}
   m_Layer: 0
   m_Name: Impulse
   m_TagString: Untagged
@@ -2135,6 +2136,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ValueImp: 100
+--- !u!114 &-6983627937871886374
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1922366763854158179}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78444386b6c30924ab00aedf407458e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _ico: {fileID: 522395433052209473, guid: c152b4dbc0fdb5b4db9d009ffe535c9e, type: 3}
 --- !u!1 &2058718683503586142
 GameObject:
   m_ObjectHideFlags: 0

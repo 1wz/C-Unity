@@ -6156,6 +6156,7 @@ GameObject:
   - component: {fileID: 2426194422061341706}
   - component: {fileID: 7251262067349563713}
   - component: {fileID: 7251262067349563718}
+  - component: {fileID: 3682628614027111272}
   m_Layer: 0
   m_Name: Die
   m_TagString: Untagged
@@ -6204,6 +6205,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ee871b8c66ea4e4a8a6cd8b571e1d47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &3682628614027111272
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7142470995143102118}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78444386b6c30924ab00aedf407458e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _ico: {fileID: 522395433052209473, guid: c152b4dbc0fdb5b4db9d009ffe535c9e, type: 3}
 --- !u!1 &7287018096826694811
 GameObject:
   m_ObjectHideFlags: 0

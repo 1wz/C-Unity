@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ScoreView : MonoBehaviour,IDisposable
+public class ScoreView : MonoBehaviour,IDisposable,ISaveble
 {
     private Text score;
 
@@ -45,5 +45,20 @@ public class ScoreView : MonoBehaviour,IDisposable
     {
         Score.OnTakeBonus -= AddScore;
         Controller.OnReload -= Reload;
+        PlayerAbstract.OnWin -= ShowWin;
+        PlayerAbstract.OnDie -= ShowDie;
+    }
+
+    public ArrayList Save()
+    {
+        ArrayList SaveParam = new();
+        SaveParam.Add(score.text);
+        score.text +="игра сохранена\n";
+        return SaveParam;
+    }
+
+    public void Load(ArrayList SaveParam)
+    {
+        score.text=((string)SaveParam[0] + "игра загружена\n");
     }
 }

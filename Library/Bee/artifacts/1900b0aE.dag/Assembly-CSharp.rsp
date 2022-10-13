@@ -367,10 +367,12 @@
 "Assets/Scripts/SerializebleClass.cs"
 "Assets/Scripts/View/CameraManager.cs"
 "Assets/Scripts/View/ParticleView.cs"
+"Assets/Scripts/View/Radar.cs"
+"Assets/Scripts/View/RadarObj.cs"
 "Assets/Scripts/View/ScoreView.cs"
 "Assets/Simple Helvetica/SimpleHelvetica.cs"
 -langversion:9.0
-
+/unsafe+
 /deterministic
 /optimize+
 /debug:portable

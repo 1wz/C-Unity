@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class PlayerAbstract : MonoBehaviour, IDisposable
+public abstract class PlayerAbstract : MonoBehaviour, IDisposable,ISaveble
 {
     [SerializeField]
     float Forse = 5f;
@@ -58,5 +58,26 @@ public abstract class PlayerAbstract : MonoBehaviour, IDisposable
     public void Dispose()
     {
         Controller.OnReload -= Reload;
+    }
+
+    public ArrayList Save()
+    {
+        ArrayList SaveParam = new();
+        SaveParam.Add(gameObject.activeSelf);
+        SaveParam.Add(score);
+        SaveParam.Add(transform.position.x);
+        SaveParam.Add(transform.position.y);
+        SaveParam.Add(transform.position.z);
+        SaveParam.Add(forse);
+        return SaveParam;
+    }
+
+    public void Load(ArrayList SaveParam)
+    {
+        gameObject.SetActive((bool)SaveParam[0]);
+        score = (int)SaveParam[1];
+        transform.position = new Vector3((float)SaveParam[2],(float)SaveParam[3],(float)SaveParam[4]);
+        forse = (float)SaveParam[5];
+
     }
 }

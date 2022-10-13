@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 
-public interface IDestroy:IDisposable
+public interface IDestroy:ISaveble
 {
     void Destroy();
     void Reload();
@@ -13,6 +13,7 @@ public interface IDestroy:IDisposable
 
 public interface ISaveble
 {
-
+    public ArrayList Save();
+    public void Load(ArrayList data);
 }
 

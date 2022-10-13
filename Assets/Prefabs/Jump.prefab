@@ -6240,6 +6240,7 @@ GameObject:
   - component: {fileID: 2797030012625824577}
   - component: {fileID: 7195399172567703050}
   - component: {fileID: 7195399172567703049}
+  - component: {fileID: 1651638360522862822}
   m_Layer: 0
   m_Name: Jump
   m_TagString: Untagged
@@ -6289,6 +6290,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ValueImp: 30
+--- !u!114 &1651638360522862822
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7234397858498230765}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78444386b6c30924ab00aedf407458e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _ico: {fileID: 522395433052209473, guid: c152b4dbc0fdb5b4db9d009ffe535c9e, type: 3}
 --- !u!1 &7406094147889205006
 GameObject:
   m_ObjectHideFlags: 0
