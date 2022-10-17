@@ -7,33 +7,24 @@ using UnityEngine;
 public class CameraManager : MonoBehaviour,IDisposable
 {
     [SerializeField]
-    float TimeScale = 1f;
+    public float TimeScale = 1f;
     [SerializeField]
-    float Power = 0.01f;
+    public float Power = 0.01f;
     Vector3 DefoltHeight;
     TransWaight[] Players;
     float SumWaights;
     Vector3 center;
     Vector3 ShakeVec = Vector3.zero;
     [SerializeField]
-    float RadiusOfCamera=2f;
+    public float RadiusOfCamera=2f;
     float rad=0f;
     void Awake()
     {
 
         PlayerAbstract.OnDie += Shake;
 
-        var players = FindObjectsOfType<PlayerAbstract>();
-        Players = new TransWaight[players.Length];
-        for(int i = 0; i< players.Length; i++)
-        {
-            Players[i]= new TransWaight(players[i].transform, 0);
-        }
+        InitParam();
 
-
-        SetWaights();
-        center = Players[0].Trans.position;
-        center = GetCenter();
         DefoltHeight = transform.position-center;
         //RadiusOfCamera=(float)Math.Tan(Camera.main.fieldOfView * Mathf.Deg2Rad) * Vector3.Magnitude(DefoltHeight)/4;
 
@@ -132,6 +123,29 @@ public class CameraManager : MonoBehaviour,IDisposable
     public void Dispose()
     {
         PlayerAbstract.OnDie -= Shake;
+    }
+
+    void InitParam()
+    {
+        var players = FindObjectsOfType<PlayerAbstract>();
+        Players = new TransWaight[players.Length];
+        for (int i = 0; i < players.Length; i++)
+        {
+            Players[i] = new TransWaight(players[i].transform, 0);
+        }
+
+
+        SetWaights();
+        center = Players[0].Trans.position;
+        center = GetCenter();
+    }
+    private void OnDrawGizmosSelected()
+    {
+#if UNITY_EDITOR
+        InitParam();
+        //Gizmos.matrix = Matrix4x4.TRS(t.position, t.rotation, flat);
+        Gizmos.DrawWireSphere(center, RadiusOfCamera);
+#endif
     }
 
 }
