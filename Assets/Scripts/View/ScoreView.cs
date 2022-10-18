@@ -8,6 +8,12 @@ public class ScoreView : MonoBehaviour,IDisposable,ISaveble
 {
     private Text score;
 
+    static public Action<(string, int)> cortage;//
+
+    public void ViewCortage((string, int) cort)//
+    {
+        score.text +="у игрока " + cort.Item1 + " "+ cort.Item2+" очков\n";
+    }
     private void Awake()
     {
         score = GetComponent<Text>();
@@ -15,6 +21,7 @@ public class ScoreView : MonoBehaviour,IDisposable,ISaveble
         Controller.OnReload += Reload;
         PlayerAbstract.OnWin += ShowWin;
         PlayerAbstract.OnDie += ShowDie;
+        cortage += ViewCortage;//
     }
 
     public void AddScore(int t, PlayerAbstract PA)

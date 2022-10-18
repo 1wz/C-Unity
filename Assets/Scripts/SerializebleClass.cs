@@ -50,7 +50,7 @@ public class Saver
     {
         if (!File.Exists(dataPath))
         {
-            Debug.Log("file not found");
+            Debug.Log("savefile not found  "+dataPath);
             return;
         }
 

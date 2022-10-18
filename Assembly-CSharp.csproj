@@ -64,9 +64,10 @@
     <Compile Include="Assets\Scripts\models\Bonuses\Impulse.cs" />
     <Compile Include="Assets\Scripts\View\ScoreView.cs" />
     <Compile Include="Assets\Scripts\models\Bonuses\Invers.cs" />
+    <Compile Include="Assets\Scripts\CovariantDelegate.cs" />
     <Compile Include="Assets\Scripts\models\Bonuses\Speed.cs" />
+    <Compile Include="Assets\Scripts\View\Cortage.cs" />
     <Compile Include="Assets\Scripts\models\Bonuses\Win.cs" />
-    <Compile Include="Assets\Scripts\Lesson7.cs" />
     <Compile Include="Assets\Scripts\models\Bonuses\Interfaces.cs" />
     <Compile Include="Assets\Scripts\SerializebleClass.cs" />
     <Compile Include="Assets\Scripts\View\RadarObj.cs" />
